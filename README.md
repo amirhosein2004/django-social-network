@@ -28,11 +28,11 @@ This is a simple social media project built with Django.
 - Search functionality:
   - Search posts by keywords
 
--also in this project users can login with email or username 
--also users can retrive password with email
--we also create of signals
-
+- **Additional Features:**
+  - Users can login with email or username.
+  - Users can retrieve password with email.
+  - Implementation of signals.
+  - 
 ## Technologies Used
 
 This project is styled using CSS and HTML. It utilizes Django for backend functionality.
-
