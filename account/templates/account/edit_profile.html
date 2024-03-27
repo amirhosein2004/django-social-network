@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_headers %}
+<link rel="stylesheet" href="{% static 'account/css/style.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="form-container">
+        <form action="" method="post" class="form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn-submit">Edit</button>
+        </form>
+    </div>
+{% endblock %}
+

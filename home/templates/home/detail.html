@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_headers %}
+<link rel="stylesheet" href="{% static 'account/css/style.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="post-details">
+        {% if request.user.id == post.user.id %}
+            <div class="post-actions">
+                <a href="{% url 'home:post_delete' post.id %}" class="btn btn-danger">Delete</a>
+                <a href="{% url 'home:post_update' post.id %}" class="btn btn-info">Update</a>
+            </div>
+        {% endif %}
+
+        <div class="post-info">
+            <p><a href="{% url 'account:user_profile' post.user.id %}" class="username">{{ post.user.username }}</a> - {{ post.updated|date:"Y-M" }}</p>
+            <p class="post-body">{{ post.body }}</p>
+        </div>
+
+        {% if request.user.is_authenticated %}
+            <div class="like-comment-section">
+                <a href="{% url 'home:post_like' post.id %}" class="btn btn-primary {% if can_like %}disabled{% endif %}">Like {{ post.likes_count }}</a>
+
+                <form action="" method="post" class="comment-form">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+            </div>
+        {% else %}
+            <p class="alert alert-danger">Only logged in users can comment.</p>
+        {% endif %}
+
+        <div class="comments">
+            {% for comment in comments %}
+                <div class="comment">
+                    <div class="card">
+                        <div class="card-header">{{ comment.user }} | {{ comment.created|timesince }}</div>
+                        <div class="card-body">{{ comment.body }}</div>
+
+                        {% if request.user.is_authenticated %}
+                            <form action="{% url 'home:add_reply' post.id comment.id %}" method="post" class="reply-form">
+                                {% csrf_token %}
+                                {{ reply_form.as_p }}
+                                <button type="submit" class="btn btn-primary">Send</button>
+                            </form>
+                        {% endif %}
+
+                        <div class="replies">
+                            {% with replies=comment.rcomments.all %}
+                                {% for reply in replies %}
+                                    <div class="reply bg-primary text-white p-3 m-2">{{ reply.user }} <br/> {{ reply.body }}</div>
+                                {% endfor %}
+                            {% endwith %}
+                        </div>
+                    </div>
+                </div>
+            {% empty %}
+                <p>No comments yet!</p>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

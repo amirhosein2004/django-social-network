@@ -1,0 +1,288 @@
+.form-container {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+}
+
+.form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form p {
+    margin-bottom: 10px;
+}
+
+.btn-submit {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #0056b3;
+}
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form {
+    margin-top: 20px;
+}
+
+.btn-login {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-login:hover {
+    background-color: #0056b3;
+}
+.user-profile {
+    padding: 20px;
+}
+
+.profile-actions {
+    margin-bottom: 20px;
+}
+
+.user-posts {
+    margin-top: 20px;
+}
+
+.card-columns {
+    column-count: 2;
+}
+
+.card {
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-link {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.card-link:hover {
+    color: #007bff;
+}
+.register-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.register-form {
+    margin-top: 20px;
+}
+
+.btn-register {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-register:hover {
+    background-color: #0056b3;
+}
+.create-form-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.create-form {
+    margin-top: 20px;
+}
+
+.btn-create {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-create:hover {
+    background-color: #0056b3;
+}
+.post-details {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.post-actions {
+    margin-bottom: 20px;
+}
+
+.post-info {
+    margin-bottom: 20px;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.post-body {
+    margin-bottom: 20px;
+}
+
+.like-comment-section {
+    margin-bottom: 20px;
+}
+
+.comment-form {
+    margin-bottom: 20px;
+}
+
+.comments {
+    margin-top: 20px;
+}
+
+.comment {
+    margin-bottom: 20px;
+}
+
+.card-header {
+    font-weight: bold;
+}
+
+.card-body {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.reply-form {
+    margin-top: 10px;
+}
+
+.replies {
+    margin-top: 10px;
+}
+
+.reply {
+    padding: 10px;
+    background-color: #007bff;
+    border-radius: 5px;
+    color: #fff;
+}
+.search-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.search-form {
+    margin-bottom: 20px;
+}
+
+.btn-search {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-search:hover {
+    background-color: #0056b3;
+}
+
+.card {
+    margin-top: 20px;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-link {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.card-link:hover {
+    color: #007bff;
+}
+.update-form-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.update-form {
+    margin-top: 20px;
+}
+
+.btn-update {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-update:hover {
+    background-color: #0056b3;
+}

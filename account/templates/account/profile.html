@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_headers %}
+<link rel="stylesheet" href="{% static 'account/css/style.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="user-profile">
+        <h2 class="text-center">{{ user.username }}</h2>
+
+        {% if request.user.id == user.id %}
+            <div class="profile-actions">
+                <a href="{% url 'home:post_create' %}" class="btn btn-primary">Create</a>
+                <a href="{% url 'account:edit_user' %}" class="btn btn-info">Edit Profile</a>
+            </div>
+        {% endif %}
+
+        {% if request.user.id != user.id %}
+            <div class="profile-actions">
+                {% if not is_following %}
+                    <a href="{% url 'account:user_follow' user.id %}" class="btn btn-primary">Follow</a>
+                {% else %}
+                    <a href="{% url 'account:user_unfollow' user.id %}" class="btn btn-secondary">Unfollow</a>
+                {% endif %}
+            </div>
+        {% endif %}
+
+        <div class="user-posts">
+            <div class="card-columns">
+                {% for post in posts %}
+                    <div class="card">
+                        <div class="card-body">
+                            <a href="{{ post.get_absolute_url }}" class="card-link">{{ post.body|truncatewords:8 }}</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

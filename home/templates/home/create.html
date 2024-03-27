@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_headers %}
+<link rel="stylesheet" href="{% static 'account/css/style.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="create-form-container">
+        <form action="" method="post" class="create-form" novalidate>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn-create">Create</button>
+        </form>
+    </div>
+{% endblock %}
